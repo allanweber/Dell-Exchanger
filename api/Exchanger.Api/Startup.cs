@@ -91,8 +91,9 @@ namespace Exchanger.Api
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IAssignmentRepository, AssignmentRepository>();
-
             services.AddScoped<IProjectService, ProjectService>();
+
+            services.AddScoped<ICoinRepository, CoinRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

@@ -11,6 +11,9 @@ namespace Exchanger.Infrastructure.Mappers
             this.CreateMap<Project, ProjectDto>();
 
             this.CreateMap<Assignment, AssignmentDto>();
+
+            //New
+            this.CreateMap<Coin, CoinDto>();
         }
     }
 }

@@ -2,7 +2,9 @@
 using System;
 using Exchanger.Domain.CommandHandlers.Commands.Assignment;
 using Exchanger.Domain.CommandHandlers.Commands.Project;
+using Exchanger.Domain.CommandHandlers.Commands.Coin;
 using Exchanger.Domain.Entities;
+using Exchanger.Domain.Dtos;
 
 namespace Exchanger.Infrastructure.Mappers
 {
@@ -16,6 +18,10 @@ namespace Exchanger.Infrastructure.Mappers
             this.CreateMap<AssignmentInsertCommand, Assignment>()
                 .ForMember(entity => entity.DueDate, source => source.MapFrom(from => DateTime.Parse(from.DueDate)));
             this.CreateMap<AssignmentUpdateCommand, Assignment>();
+
+
+            //new
+            this.CreateMap<CoinDto, Coin>();
         }
     }
 }
